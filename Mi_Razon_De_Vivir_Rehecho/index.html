@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <title>Mi Razón de Vivir</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="corazones-flotando"></div>
+
+
+    <button onclick="document.getElementById('musica').play()">💓REPRODUCIR MUSICIA💓</button>
+    <audio id="musica" loop>
+      <source src="mai.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio.
+    </audio>
+    
+    <div class="container">
+        <p> 🤍JUTOS POR SIEMPRE🤍 </p> 
+        <img src="imagenes/imagen4.jpg" alt="JUNTOS POR SIEMPRE" class="main-image" />
+       
+        <h1 class="typewriter">💗mi razón de vivir 💗</h1>
+        <button onclick="mostrarMensaje()">Ver mensaje especial 💌</button>
+        <div id="mensaje" style="display: none;">
+            <p>
+                Le agradezco mucho a Dios 🙏, ¿por qué? Pues por unir nuestras vidas desde ese 20 de abril del 2024 que es inolvidable mi nena 💖.
+                Desde ahí empecé a amarte y quererte tanto 💘. Fue raro pero sin duda muy bonito ese día 😍.<br><br>
+
+                Te tengo que confesar que al principio tenía mucho miedo 😔, tú ya sabes de qué tantas cosas mi amorcito 💬.
+                Desde que nos conocemos tenemos buena química ✨, y día con día crecemos más 🌱.
+                Te agradezco mucho por tu fidelidad mi nena 🤍, por tu amor incondicional y tu respeto mi amorcito 🙇‍♂️.<br><br>
+
+                Gracias por amarme tanto como yo te amo a ti 💞. Te lo he dicho más de una vez y hoy te lo vuelvo a repetir,
+                pero no solo es de decirlo, por eso te lo estoy demostrando mi nena 💖.<br><br>
+
+                Perdón por no ir a verte hoy mi niña 😢, quisiera estar contigo en estos momentos,
+                pero igual estoy muy feliz por nuestro primer año de muchos y muchos años juntos mi vida 🥰.
+                Gracias por entenderme mi amorcito bello 💗.<br><br>
+
+                Sé que no he sido el novio perfecto en todos los aspectos mi nena, pero quiero que sepas que siempre mejoro como persona para ti 💪.<br><br>
+
+                Gracias por siempre ser tan amorosa conmigo 💐, tan detallista y linda mi niña 🌸,
+                tan cariñosa y muy atenta mi amorcito 😚. Muchas gracias por siempre ser la mejor persona para mí 💕.<br><br>
+
+                También quiero que sepas que amo cada drama y berrinche que me haces 🤭❤️,
+                nunca dejes de ser así conmigo mi nena. La neta a veces te pasas con tus bromas jajaja 😂 pero me encantan 😆.<br><br>
+
+                También acostúmbrate a soportarme cuando te haga bromas o berrinches o dramas mi nena 🤭.<br><br>
+
+                ¡Ya un año de estar con la mejor persona del mundo amorcito, y eres tú! ❤️<br><br>
+
+                Estamos hechos por Dios el uno para el otro 🙏, y este primer año es nuestro primer fruto del gran amor que nos tenemos mi nena 💖.<br><br>
+
+                Hablando de crecer… también amo cuando estamos así 😏 jajaja, ya tú sabes mi niña 🤭.<br><br>
+
+                Te amo mucho mi vida hermosaaaa 😍. Recuerda que ya falta poco para casarnos mi niña 💍❤️💗🤍.<br><br>
+
+                Indio amar mucho a india cada día más 💗🤭<br><br>
+
+                ¡GRACIAS POR TU GRAN AMOR MI CHAPARRITA BONITAAA! 💝
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <div class="imagenes-sorpresa">
+        <div class="imagen-carcasa" onclick="revelar(this)">
+          <img src="imagenes/imagen2.jpg" alt="sorpresa 1" />
+          <div class="cubierta">Haz clic 💖</div>
+        </div>
+        <div class="imagen-carcasa" onclick="revelar(this)">
+          <img src="imagenes/imagen5.jpg" alt="sorpresa 2" />
+          <div class="cubierta">Haz clic 💖</div>
+        </div>
+        <div class="imagen-carcasa" onclick="revelar(this)">
+          <img src="imagenes/imagen3.jpg" alt="sorpresa 3" />
+          <div class="cubierta">Haz clic 💖</div>
+        </div>
+        <div class="imagen-carcasa" onclick="revelar(this)">
+          <img src="imagenes/imagen4.jpg" alt="sorpresa 4" />
+          <div class="cubierta">Haz clic 💖</div>
+        </div>
+      </div>
+      
+</body>
+</html>
+<script>
+    const contenedor = document.querySelector(".corazones-flotando");
+  
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+  
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.style.animationDuration = 4 + Math.random() * 4 + "s";
+  
+      contenedor.appendChild(corazon);
+  
+      setTimeout(() => {
+        corazon.remove();
+      }, 8000);
+    }
+  
+    setInterval(crearCorazon, 500);
+  </script>
+  
+  <script>
+    function revelar(elemento) {
+      elemento.classList.add("revelada");
+    }
+  </script>
+  
